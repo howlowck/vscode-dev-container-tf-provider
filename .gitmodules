@@ -1,0 +1,3 @@
+[submodule "terraform-provider-azurerm"]
+	path = terraform-provider-azurerm
+	url = git@github.com:howlowck/terraform-provider-azurerm.git
