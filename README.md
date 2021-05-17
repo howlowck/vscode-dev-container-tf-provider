@@ -13,18 +13,17 @@ VSCode Dev Container Includes:
 
 ### 1. Repo Setup
 
-1. Clone this repo and open in VSCode Dev Container.
-2. Edit `.gitmodules` with your forked `terraform-provider-azurerm` repo clone URL (ssh or https)
-3. Run `git submodule init`
-4. Run `git submodule update`
-5. You should now have content under the `terraform-provider-azurerm` folder
+1. Clone this repo in your local machine: `git clone git@github.com:howlowck/vscode-dev-container-tf-provider.git`. This will create a directory, we will call this directory the "environment" directory.
+2. Inside the "environment" directory, clone your forked `terraform-provider-azurerm` repo.
+3. Open the "environment" directory in VSCode Dev Container.
+4. At this point, you should see ![VSCode Dev Container Screen Capture](./docs/media/dev-container-example.png) in the lower-left corner of your VSCode. Also you should have `terraform-provider-azurerm` directory along with `.devcontainer`, `.env.example`, `.terraformrc`, etc in Explorer pane.
 
 ### 2. Set up Environment Variables
 
 1. Run `az login` in the VSCode Dev Container terminal
-2. Create a Service Principal with the subscription you want to use. Take note of the output.
+2. Create a Service Principal with the subscription you want to use. **Take note of the output.**
 3. Copy `.env.example` and Paste/Rename the new file as `.env`
-4. Fill out the `.env` file with info from Step 2
+4. Fill out the `.env` file with info from Step 2. (You can leave `ARM_METADATA_HOST` blank.)
 5. Run `setenv`
 6. Run `env` to verify that the values are correctly set in the environment variables
 
