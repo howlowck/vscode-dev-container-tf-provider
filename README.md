@@ -17,7 +17,7 @@ VSCode Dev Container Includes:
 2. Edit `.gitmodules` with your forked `terraform-provider-azurerm` repo clone URL (ssh or https)
 3. Run `git submodule init`
 4. Run `git submodule update`
-5. You should know have content under the `terraform-provider-azurerm` folder
+5. You should now have content under the `terraform-provider-azurerm` folder
 
 ### 2. Set up Environment Variables
 
@@ -28,3 +28,9 @@ VSCode Dev Container Includes:
 5. Run `setenv`
 6. Run `env` to verify that the values are correctly set in the environment variables
 
+### 3. Develop Provider Features (According to Provider README)
+
+1. cd `terraform-provider-azurerm`
+2. `make build`
+3. You can now code the features. (If you are using ssh to auth, you might have to code in another VSCode instance outside of the container.)
+4. To run acceptance test, for example: `go test -timeout 30m -run ^TestAccSignalRService_serviceMode$ github.com/terraform-providers/terraform-provider-azurerm/azurerm/internal/services/signalr -v`
