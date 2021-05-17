@@ -43,6 +43,5 @@ RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
 # Setup Environment
 #####################
 RUN \
-    ln -s /workspaces/terraform-provider-dev-container/.terraformrc $HOME/.terraformrc && \
     echo "alias setenv='export \$(grep -v '^#' .env | xargs)'" >> ~/.bashrc && \
     echo "alias setenv='export \$(grep -v '^#' .env | xargs)'" >> ~/.zshrc
