@@ -1,8 +1,15 @@
-# VSCode Environment for Terraform Azure Provider Development
+# VSCode Dev Container for Terraform Azure Provider Development
 
-This Repo is to provide an isolated and low-configuration environment for Terraform Azure Providers. The goal is to get a developer adding provider features as quickly as possible.
+This Dev Container is to provide an isolated and low-configuration environment for Terraform Azure Providers. The goal is to get a developer adding provider features as quickly as possible.
+
+## Why?
+
+Context switching between "using" Terraform and "developing" Terraform provider features is often error-prune. If you forget to reset some environment variables or reload your shell, your Azure resources might be going to unintended places. For some of us, switching between "using" and "developing" Terraform happens multiple times a day. The tool provides an isolated environment using Dev Container, making switching to developing Terraform provider a matter of opening up your VSCode.
+
+## Features
 
 VSCode Dev Container Includes:
+
 * Go 1.16
 * Terraform
 * Az CLI
